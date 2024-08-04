@@ -1,0 +1,19 @@
+import serial
+
+bluetooth_port = "/dev/rfcomm0"  # Bluetooth serial port, may vary
+
+# Establish Bluetooth connection
+bluetooth = serial.Serial(bluetooth_port, 9600)
+
+try:
+    while True:
+        if bluetooth.inWaiting() > 0:
+            # Read the data from Arduino
+            data = bluetooth.readline().decode().strip()
+            print("Received data:", data)
+
+except KeyboardInterrupt:
+    pass
+
+# Close the Bluetooth connection
+bluetooth.close()

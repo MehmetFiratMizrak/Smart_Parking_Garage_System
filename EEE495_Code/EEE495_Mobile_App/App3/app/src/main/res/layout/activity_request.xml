@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15dp"
+    tools:context=".Request">
+
+    <TextView
+        android:id="@+id/textViewRequest"
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:text="@string/requests" />
+    <Button
+        android:id="@+id/btn_acceptRequest"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:onClick="handleText6"
+        android:text="@string/accept" />
+    <Button
+        android:id="@+id/btn_denyRequest"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:onClick="handleText7"
+        android:text="@string/deny" />
+    <Button
+        android:id="@+id/btn_backRequest"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:text="@string/back" />
+
+</LinearLayout>
